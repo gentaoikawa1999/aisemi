@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【無料公開】初心者でもAIを使って月5万円の副収入を作る方法 | AI副業スターターキット</title>
+    <meta name="description" content="専門知識不要・プログラミング不要・初期投資ほぼゼロ。ChatGPTを使って、寝ている間に収益が生まれる仕組みを構築する方法を無料で公開中！">
+    <style>
+        /* ベーシックリセット */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* コンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #0062cc, #0097ff);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #0062cc, #0097ff);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        
+        /* CTAボタン */
+        .cta-button {
+            display: inline-block;
+            background-color: #00cc66;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            background-color: #00bb5d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* セクション共通 */
+        section {
+            padding: 60px 0;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* 問題提起セクション */
+        .problem {
+            background-color: #f2f2f2;
+        }
+        
+        .problem-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .problem-item {
+            flex-basis: calc(33.333% - 20px);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .problem-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #0062cc;
+        }
+        
+        /* ソリューションセクション */
+        .solution {
+            background-color: white;
+        }
+        
+        .solution-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .solution-item {
+            flex-basis: calc(33.333% - 20px);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .solution-item h3 {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            color: #0062cc;
+        }
+        
+        .solution-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background-color: #e6f3ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #0062cc;
+        }
+        
+        /* ベネフィットセクション */
+        .benefits {
+            background-color: #f9f9f9;
+        }
+        
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .benefit-item {
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 40px;
+            display: flex;
+        }
+        
+        .benefit-icon {
+            flex: 0 0 60px;
+            height: 60px;
+            background-color: #e6f3ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #0062cc;
+            margin-right: 20px;
+        }
+        
+        .benefit-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #0062cc;
+        }
+        
+        /* 成功事例セクション */
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .testimonial-item {
+            flex-basis: calc(33.333% - 20px);
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-item:before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3rem;
+            color: #e6e6e6;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e6e6e6;
+            margin-right: 15px;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* 特典セクション */
+        .bonus {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        
+        .bonus-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .bonus-item {
+            flex-basis: calc(33.333% - 20px);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .bonus-item h3 {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            color: #0062cc;
+        }
+        
+        .bonus-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            background-color: #e6f3ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #0062cc;
+        }
+        
+        /* フォームセクション */
+        .form-section {
+            background-color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* フッター */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+            
+            .problem-item, .solution-item, .testimonial-item, .bonus-item {
+                flex-basis: 100%;
+            }
+            
+            .benefit-item {
+                flex-basis: 100%;
+            }
+        }
+        
+        /* カウントダウンタイマー */
+        .countdown {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .countdown-timer {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* 特典バッジ */
+        .bonus-badge {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI副業アカデミー</h1>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>初心者でもAIを使って<br>月5万円の副収入を作る方法</h1>
+            <h2>専門知識不要・プログラミング不要・初期投資ほぼゼロ</h2>
+            <p>ChatGPTを使って、寝ている間に収益が生まれる仕組みを構築する</p>
+            <a href="#form" class="cta-button">無料スターターキットを今すぐ受け取る</a>
+            <div class="countdown">
+                <span>このオファーは期間限定です：残り</span>
+                <span class="countdown-timer" id="countdown">47:59:59</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="problem">
+        <div class="container">
+            <h2>AIの時代に取り残されていませんか？</h2>
+            <div class="problem-container">
+                <div class="problem-item">
+                    <h3>日本人の9%しかAIを使いこなせていない</h3>
+                    <p>AIツールが急速に普及する中、実際に活用できている日本人はわずか9%。情報格差が広がっています。</p>
+                </div>
+                <div class="problem-item">
+                    <h3>AIを収益化できているのはわずか0.5%</h3>
+                    <p>AIを知っていても、それを収入に変えられている人はさらに少数。今がチャンスの時期です。</p>
+                </div>
+                <div class="problem-item">
+                    <h3>今後5年でAIによって代替される仕事の増加</h3>
+                    <p>多くの仕事がAIに代替される中、AIを味方につけるスキルが今後の生存戦略になります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="solution">
+        <div class="container">
+            <h2>AIを味方につけて、新しい収入源を作る方法</h2>
+            <div class="solution-container">
+                <div class="solution-item">
+                    <div class="solution-icon">1</div>
+                    <h3>ChatGPTを使った5つの副業モデル</h3>
+                    <p>AI文章ライター、AI画像クリエイター、AIコンテンツ販売など、すぐに始められる5つの副業モデルを公開します。</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-icon">2</div>
+                    <h3>初心者でも30日で収益化できる実証済みの方法</h3>
+                    <p>専門知識がなくても、ステップバイステップで収益化まで導くロードマップを提供します。</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-icon">3</div>
+                    <h3>スマホ一台から始められる手軽さ</h3>
+                    <p>特別な機材やソフトウェアは不要。お持ちのスマートフォンだけで始められます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2>このAI副業システムがあなたにもたらす5つのメリット</h2>
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏰</div>
+                    <div class="benefit-content">
+                        <h3>時間の自由を手に入れる</h3>
+                        <p>自動化の仕組みで、寝ている間も収益が発生。1日30分の作業で継続的な収入源を構築できます。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌍</div>
+                    <div class="benefit-content">
+                        <h3>場所を選ばない働き方</h3>
+                        <p>スマホ一台あれば、どこでも仕事ができます。通勤時間のストレスから解放されます。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>スキルアップと市場価値の向上</h3>
+                        <p>最先端のAIスキルを身につけられます。履歴書に書ける実践的なデジタルスキルが身につきます。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <div class="benefit-content">
+                        <h3>リスクの少ない副業スタート</h3>
+                        <p>初期投資はほぼゼロ。失敗しても大きな損失がない安心感があります。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>段階的な収益アップ</h3>
+                        <p>1ヶ月目：月1〜3万円、3ヶ月目：月5〜8万円、6ヶ月目：月10万円以上も可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>すでに多くの方が成功しています</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>システムエンジニアの仕事をしながら、AI副業を始めました。最初は月3万円程度でしたが、今では月7万円の安定収入になっています。将来はAIコンサルタントとして独立することも視野に入れています。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>山田さん（28歳・会社員）</h4>
+                            <p>AI文章ライター</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>子育て中でも空き時間を活用してAI副業を始めました。子供のイラストや教材作成が得意分野になり、月5万円の収入を実現。家計に余裕が生まれました。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>佐藤さん（35歳・主婦）</h4>
+                            <p>AI画像クリエイター</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>大学の授業の合間にAI副業を始めました。最初は月3万円程度でしたが、コツを掴んでからは月10万円を達成。就活でもAIスキルをアピールし、内定をいただきました。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>鈴木さん（22歳・大学生）</h4>
+                            <p>AIコンテンツ販売</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bonus">
+        <div class="container">
+            <h2>期間限定オファー！今すぐ登録で特典が追加されます</h2>
+            <p>先着100名様限定！48時間以内の登録で特別ボーナスをプレゼント</p>
+            <div class="bonus-container">
+                <div class="bonus-item">
+                    <span class="bonus-badge">特典1</span>
+                    <div class="bonus-icon">📋</div>
+                    <h3>AI副業Q&A集</h3>
+                    <p>よくある質問と回答をまとめた完全ガイド。初心者が陥りがちな落とし穴を回避できます。</p>
+                </div>
+                <div class="bonus-item">
+                    <span class="bonus-badge">特典2</span>
+                    <div class="bonus-icon">📊</div>
+                    <h3>AI収益化事例集</h3>
+                    <p>実際に成功している20の事例を詳細に解説。具体的な収益モデルとステップを公開します。</p>
+                </div>
+                <div class="bonus-item">
+                    <span class="bonus-badge">特典3</span>
+                    <div class="bonus-icon">👥</div>
+                    <h3>AI副業コミュニティ招待</h3>
+                    <p>14日間無料でコミュニティに参加できます。質問や相談ができる環境を提供します。</p>
+                </div>
+            </div>
+            <a href="#form" class="cta-button">無料スターターキットを今すぐ受け取る</a>
+        </div>
+    </section>
+    
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2>今すぐ無料スターターキットを受け取る</h2>
+            <div class="form-container">
+                <form id="lead-form">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話番号（任意）</label>
+                        <input type="tel" id="phone" name="phone" placeholder="090-1234-5678">
+                    </div>
+                    <button type="submit" class="cta-button">無料スターターキットを受け取る</button>
+                </form>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                    ※ご登録いただいたメールアドレスに、AI副業スターターキットをお送りします。<br>
+                    ※個人情報は厳重に管理し、目的外の利用はいたしません。
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">特定商取引法に基づく表記</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+            <p>&copy; 2025 AI副業アカデミー All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // カウントダウンタイマー
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let hours = 47;
+            let minutes = 59;
+            let seconds = 59;
+            
+            const countdownInterval = setInterval(() => {
+                seconds--;
+                
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                
+                if (hours < 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = "終了しました";
+                    return;
+                }
+                
+                countdownElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        // フォーム送信処理
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // ここに実際のフォーム送信処理を実装
+            // 例: ActiveCampaign、MailChimpなどのAPIを呼び出す
+            
+            // 送信成功時の処理
+            alert('ご登録ありがとうございます！メールをご確認ください。');
+            
+            // リードマグネットのダウンロードページへリダイレクト
+            // window.location.href = 'thank-you.html';
+        });
+        
+        // ページ読み込み時の処理
+        window.addEventListener('load', function() {
+            startCountdown();
+        });
+    </script>
+</body>
+</html>
